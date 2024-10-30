@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product List</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Consider adding a favicon for better branding -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body class="">
+<body>
     
     <div class="container">
         <header>
-            <div class="title">PRODUCT LIST</div>
-            <div class="icon-cart">
+            <h1 class="title">Product List</h1>
+            <div class="icon-cart" aria-label="Shopping Cart" role="button" tabindex="0">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
                 </svg>
-                <span>0</span>
+                <span class="cart-count">0</span>
             </div>
         </header>
-        <div class="listProduct">
-
-        </div>
+        
+        <main>
+            <section class="listProduct" aria-labelledby="product-list">
+                <h2 id="product-list" class="visually-hidden">Available Products</h2>
+                <!-- Product items will be dynamically added here -->
+            </section>
+        </main>
     </div>
-    <div class="cartTab">
-        <h1>Shopping Cart</h1>
-        <div class="listCart">
-            
-        </div>
+    
+    <aside class="cartTab" aria-labelledby="shopping-cart">
+        <h1 id="shopping-cart">Shopping Cart</h1>
+        <section class="listCart">
+            <!-- Cart items will be dynamically added here -->
+        </section>
         <div class="btn">
-            <button class="close">CLOSE</button>
-            <button class="checkOut">Check Out</button>
+            <button class="close" aria-label="Close cart">Close</button>
+            <button class="checkOut" aria-label="Proceed to checkout">Check Out</button>
         </div>
-    </div>
+    </aside>
 
-    <script src="app.js"></script>
+    <script src="app.js" defer></script> <!-- Added defer for better performance -->
 </body>
 </html>
