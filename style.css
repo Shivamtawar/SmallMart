@@ -4,6 +4,12 @@ body {
     font-family: 'Poppins', sans-serif; /* Added fallback font */
 }
 
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Added fallback font */
+}
+
 .container {
     width: 900px;
     max-width: 90vw; /* Responsive max width */
